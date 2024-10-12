@@ -23,7 +23,7 @@
             border-radius: 20px; 
             box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5); 
             padding: 5px;
-            height: 340px;
+            height: 335px;
         }
         #cabecera {
             display: flex;
@@ -78,8 +78,7 @@
         }
         #conectados {
             padding:5px 5px 5px 5px;
-            margin: 0px 5px 0px 5px;
-            height: 240px;
+            height: 235px;
             border-radius: 20px;
             background-image: linear-gradient(to bottom, rgb(50, 50, 70),rgb(25, 25, 35));
             box-shadow: inset  0px 1px 4px 2px rgba(0, 0, 0, 0.5);
@@ -105,8 +104,8 @@
             overflow: hidden;
             white-space: nowrap;
             position: relative;
-            top: 2px;
-            width: auto;
+            top: 4px;
+            min-width: 160px;
         }
         .profesor {
             color: #ecd8cd;
@@ -125,8 +124,10 @@
         }
         .estado {
             margin: 1px 5px 3px auto;
-            position: relative;
-            bottom: 3px;            
+            vertical-align: middle;
+            height: 17px;
+            position: unset;
+            padding-bottom: 3px;           
             font-size: 15px;
         }
         .online { color: mediumseagreen}
@@ -172,7 +173,7 @@
                         //🟠 NOMBRE
                         const nombre = document.createElement("span");
                         if (member.username === "José Manuel Escribano") {
-                            nombre.textContent = "🎓 Profesordfbhdfndndfnjdfnd";
+                            nombre.textContent = "🔵 Profesor";
                             fila.className = "miembro profesor";
                             contenedor.prepend(fila);
                         }

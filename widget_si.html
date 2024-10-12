@@ -16,7 +16,7 @@
             format("woff");
         }
         body {
-            
+            width: auto;
         }
         #contenedor {
             background-image: linear-gradient(to bottom, rgb(58, 56, 75),rgb(16, 16, 20));
@@ -24,14 +24,11 @@
             box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5); 
             padding: 5px;
             height: 400px;
-            width: auto;
-            text-align: right;
         }
         #cabecera {
             display: flex;
-            height: auto;
-            width: 100%;
-            flex-direction: row;
+            justify-content: space-between;
+            padding: 5px;
             
         }
         #logo {
@@ -39,49 +36,89 @@
             background-size: cover;
             border-radius: 25px;
             border: 2px inset rgba(38, 35, 48, 0.5);
-            width: 70px;
-            height: 70px;
+            max-width: 70px;
+            max-height: 70px;
             min-width: 70px;
+            min-height: 70px;
             margin-left: 10px;
-            place-self: center;
         }
-        div#titulo {
-            width: 100%;
+        div#chapa {
+            background-image: linear-gradient(to bottom, rgb(75, 75, 90),rgb(70, 70, 90));
+            border-radius: 10px; 
+            box-shadow:  0px 1px 4px 1px rgba(0, 0, 0, 0.2);
+            height: 40px;
+            position: relative;
+            top: 25px;
+            right: 10px;
+        }
+        p#titulo {
+            width: auto;
+            position: relative;
+            top: 8px;
             font-family: "Eras-Demi";
             color: #fff;
-            margin: 20px 20px 0px 0px;
-            font-size: 1.3em;
-            text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
-            float: right;
+            margin: 0px 20px 0px 20px;
+            font-size: 20px;
+            text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(26, 23, 43, 0.336);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: black;
+            border-radius: 10px;
+            border: 3px solid rgba(26, 23, 43, 0.336);
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(70, 66, 83, 0.966);
+        }
+        #conectados {
+            padding:5px 2px 5px 2px;
+            margin: 0px 5px 0px 5px;
+            height: 290px;
+            border-radius: 20px;
+            background-image: linear-gradient(to bottom, rgb(50, 50, 70),rgb(25, 25, 35));
+            box-shadow: inset  0px 1px 4px 2px rgba(0, 0, 0, 0.5);
+            overflow-y: auto;
         }
         .miembro {
             display: flex;
-            align-items: center;
             margin: 7px;
+            padding-top: 7px;
             padding-right: 5px;
             padding: auto;
-            font-size: 12px;
-            border-radius: 15px;
-            background-color: rgba(70, 66, 83, 0.966);
+            font-size: 13px;
+            border-radius: 8px;
+            border: inset 1px rgba(24, 25, 36, 0.5);
+            background-color: rgba(70, 66, 83, 1);
             color: white;
             font-family: "Eras-Light"; 
-            text-shadow:  0px 0.5px 5px rgba(0, 0, 0, 0.2) ;
+            text-shadow:  0px 2px 2px 5px rgba(0, 0, 0, 0.8) ;
             box-shadow:  0px 1px 5px 1px rgba(0, 0, 0, 0.1) ;
         }
         .profesor {
             color: #ecd8cd;
             font-family: "Eras-Demi";
-            background-color: rgba(38, 85, 214, 0.301);
+            border: inset 1px rgba(8, 9, 53, 0.5);
+            background-color: rgba(49, 78, 158, 0.301);
         }
         .foto {
             border-radius: 50%;
-            width: 18px;
-            height: 18px;
+            width: 22px;
+            height: 22px;
+            position: relative;
+            bottom: 2px;
             margin-right: 10px;
             margin-left: 5px;
         }
         .estado {
             margin: 1px 5px 3px auto;
+            position: relative;
+            bottom: 3px;            
             font-size: 15px;
         }
         .online { color: mediumseagreen}
@@ -94,7 +131,11 @@
     <div id="contenedor">
         <div id="cabecera">
             <div id="logo"></div>
-            <div id="titulo"><p>1ºDAM - SI</p></div>
+            <div>
+                <div id="chapa">
+                    <p id="titulo">1ºDAM - SI</p>
+                </div>
+            </div>
         </div>
         <div id="conectados"></div>
     </div>

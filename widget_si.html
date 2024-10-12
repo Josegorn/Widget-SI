@@ -157,7 +157,9 @@
     </div>
     <script type="text/javascript">
 
-        const url_json = "https://discord.com/api/guilds/1288868753869639741/widget.json";
+        //🔥🔥🔥 Importante: introducir la ID del servidor, la función Widget debe de estár activada.🔥🔥🔥
+        const url_json = "https://discord.com/api/guilds/ID_del_servidor_de_discord/widget.json";
+        
         const contenedor = document.getElementById("conectados");
 
         async function cargar_datos() {
@@ -221,7 +223,7 @@
             }
         }
         cargar_datos();
-        setInterval(cargar_datos, 10000);
+        setInterval(cargar_datos, 10000);  //Aqui podemos cambiar el intervalo de actualización.
     </script>
 
 </body>

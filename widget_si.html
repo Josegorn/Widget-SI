@@ -40,24 +40,28 @@
             max-height: 70px;
             min-width: 70px;
             min-height: 70px;
-            margin-left: 10px;
+            margin-left: 8px;
         }
         div#chapa {
             background-image: linear-gradient(to bottom, rgb(75, 75, 90),rgb(70, 70, 90));
             border-radius: 10px; 
             box-shadow:  0px 1px 4px 1px rgba(0, 0, 0, 0.2);
             height: 40px;
-            position: relative;
-            top: 25px;
-            right: 10px;
-        }
-        p#titulo {
+            padding: 0px 6px 0px 6px;
             width: auto;
             position: relative;
-            top: 8px;
+            top: 12px;
+            
+        }
+        p#titulo {
+            position: relative;
+            text-align: center;
+            top: 10px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
             font-family: "Eras-Demi";
             color: #fff;
-            margin: 0px 15px 0px 15px;
             font-size: 17px;
             text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
         }
@@ -78,11 +82,12 @@
         }
         #conectados {
             padding:5px 5px 5px 5px;
-            height: 235px;
+            height: 230px;
             border-radius: 20px;
             background-image: linear-gradient(to bottom, rgb(50, 50, 70),rgb(25, 25, 35));
             box-shadow: inset  0px 1px 4px 2px rgba(0, 0, 0, 0.5);
             overflow-y: auto;
+            overflow-x: hidden;
         }
         .miembro {
             display: flex;
@@ -96,16 +101,17 @@
             font-family: "Eras-Light"; 
             text-shadow:  0px 2px 2px 5px rgba(0, 0, 0, 0.8) ;
             box-shadow:  0px 1px 5px 1px rgba(0, 0, 0, 0.1) ;
+            
         }
         span  {
-            font-size: 11px;
+            font-size: 12px;
             padding-top: 2px;
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
             position: relative;
             top: 4px;
-            min-width: 160px;
+            width: auto;
         }
         .profesor {
             color: #ecd8cd;
@@ -119,10 +125,11 @@
             height: 22px;
             position: relative;
             top: 2px;
-            margin-right: 10px;
+            margin-right: 5px;
             margin-left: 5px;
         }
         .estado {
+            text-align: right;
             margin: 1px 5px 3px auto;
             vertical-align: middle;
             height: 17px;

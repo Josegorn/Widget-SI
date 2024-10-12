@@ -23,7 +23,7 @@
             border-radius: 20px; 
             box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5); 
             padding: 5px;
-            height: 360px;
+            height: 340px;
         }
         #cabecera {
             display: flex;
@@ -57,8 +57,8 @@
             top: 8px;
             font-family: "Eras-Demi";
             color: #fff;
-            margin: 0px 20px 0px 20px;
-            font-size: 20px;
+            margin: 0px 15px 0px 15px;
+            font-size: 17px;
             text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
         }
         ::-webkit-scrollbar {
@@ -77,9 +77,9 @@
             background: rgba(70, 66, 83, 0.966);
         }
         #conectados {
-            padding:5px 2px 5px 2px;
+            padding:5px 5px 5px 5px;
             margin: 0px 5px 0px 5px;
-            height: 260px;
+            height: 240px;
             border-radius: 20px;
             background-image: linear-gradient(to bottom, rgb(50, 50, 70),rgb(25, 25, 35));
             box-shadow: inset  0px 1px 4px 2px rgba(0, 0, 0, 0.5);
@@ -87,11 +87,9 @@
         }
         .miembro {
             display: flex;
-            margin: 7px;
-            padding-top: 7px;
+            margin: 5px;
+            padding-top: 0px;
             padding-right: 5px;
-            padding: auto;
-            font-size: 13px;
             border-radius: 8px;
             border: inset 1px rgba(24, 25, 36, 0.5);
             background-color: rgba(70, 66, 83, 1);
@@ -99,6 +97,16 @@
             font-family: "Eras-Light"; 
             text-shadow:  0px 2px 2px 5px rgba(0, 0, 0, 0.8) ;
             box-shadow:  0px 1px 5px 1px rgba(0, 0, 0, 0.1) ;
+        }
+        span  {
+            font-size: 11px;
+            padding-top: 2px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            top: 2px;
+            width: auto;
         }
         .profesor {
             color: #ecd8cd;
@@ -111,7 +119,7 @@
             width: 22px;
             height: 22px;
             position: relative;
-            bottom: 2px;
+            top: 2px;
             margin-right: 10px;
             margin-left: 5px;
         }
@@ -164,7 +172,7 @@
                         //🟠 NOMBRE
                         const nombre = document.createElement("span");
                         if (member.username === "José Manuel Escribano") {
-                            nombre.textContent = "🎓 Profesor";
+                            nombre.textContent = "🎓 Profesordfbhdfndndfnjdfnd";
                             fila.className = "miembro profesor";
                             contenedor.prepend(fila);
                         }

@@ -6,7 +6,11 @@
 	],
 	"settings": {
 		"[html]": {
-			"editor.suggest.insertMode": "replace"
+			"editor.suggest.insertMode": "replace",
+			"tailwindCSS.suggestions": true,
+			"editor.inlineSuggest.enabled": true,
+			"editor.tabSize": 4,
+			"javascript.suggest.enabled": true
 		}
 	}
 }

@@ -23,7 +23,7 @@
             border-radius: 20px; 
             box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5); 
             padding: 5px;
-            height: 400px;
+            height: 335px;
         }
         #cabecera {
             display: flex;
@@ -40,25 +40,29 @@
             max-height: 70px;
             min-width: 70px;
             min-height: 70px;
-            margin-left: 10px;
+            margin-left: 8px;
         }
         div#chapa {
             background-image: linear-gradient(to bottom, rgb(75, 75, 90),rgb(70, 70, 90));
             border-radius: 10px; 
             box-shadow:  0px 1px 4px 1px rgba(0, 0, 0, 0.2);
             height: 40px;
-            position: relative;
-            top: 25px;
-            right: 10px;
-        }
-        p#titulo {
+            padding: 0px 6px 0px 6px;
             width: auto;
             position: relative;
-            top: 8px;
+            top: 12px;
+            
+        }
+        p#titulo {
+            position: relative;
+            text-align: center;
+            top: 10px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
             font-family: "Eras-Demi";
             color: #fff;
-            margin: 0px 20px 0px 20px;
-            font-size: 20px;
+            font-size: 17px;
             text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
         }
         ::-webkit-scrollbar {
@@ -77,21 +81,19 @@
             background: rgba(70, 66, 83, 0.966);
         }
         #conectados {
-            padding:5px 2px 5px 2px;
-            margin: 0px 5px 0px 5px;
-            height: 290px;
+            padding:5px 5px 5px 5px;
+            height: 230px;
             border-radius: 20px;
             background-image: linear-gradient(to bottom, rgb(50, 50, 70),rgb(25, 25, 35));
             box-shadow: inset  0px 1px 4px 2px rgba(0, 0, 0, 0.5);
             overflow-y: auto;
+            overflow-x: hidden;
         }
         .miembro {
             display: flex;
-            margin: 7px;
-            padding-top: 7px;
+            margin: 5px;
+            padding-top: 0px;
             padding-right: 5px;
-            padding: auto;
-            font-size: 13px;
             border-radius: 8px;
             border: inset 1px rgba(24, 25, 36, 0.5);
             background-color: rgba(70, 66, 83, 1);
@@ -99,6 +101,17 @@
             font-family: "Eras-Light"; 
             text-shadow:  0px 2px 2px 5px rgba(0, 0, 0, 0.8) ;
             box-shadow:  0px 1px 5px 1px rgba(0, 0, 0, 0.1) ;
+            
+        }
+        span  {
+            font-size: 12px;
+            padding-top: 2px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            top: 4px;
+            width: auto;
         }
         .profesor {
             color: #ecd8cd;
@@ -111,14 +124,17 @@
             width: 22px;
             height: 22px;
             position: relative;
-            bottom: 2px;
-            margin-right: 10px;
+            top: 2px;
+            margin-right: 5px;
             margin-left: 5px;
         }
         .estado {
+            text-align: right;
             margin: 1px 5px 3px auto;
-            position: relative;
-            bottom: 3px;            
+            vertical-align: middle;
+            height: 17px;
+            position: unset;
+            padding-bottom: 3px;           
             font-size: 15px;
         }
         .online { color: mediumseagreen}
@@ -141,7 +157,9 @@
     </div>
     <script type="text/javascript">
 
-        const url_json = "https://discord.com/api/guilds/1288868753869639741/widget.json";
+        //🔥🔥🔥 Importante: introducir la ID del servidor, la función Widget debe de estár activada.🔥🔥🔥
+        const url_json = "https://discord.com/api/guilds/ID_del_servidor_de_discord/widget.json";
+        
         const contenedor = document.getElementById("conectados");
 
         async function cargar_datos() {
@@ -164,7 +182,7 @@
                         //🟠 NOMBRE
                         const nombre = document.createElement("span");
                         if (member.username === "José Manuel Escribano") {
-                            nombre.textContent = "🎓 Profesor";
+                            nombre.textContent = "🔵 Profesor";
                             fila.className = "miembro profesor";
                             contenedor.prepend(fila);
                         }
@@ -205,7 +223,7 @@
             }
         }
         cargar_datos();
-        setInterval(cargar_datos, 10000);
+        setInterval(cargar_datos, 10000);  //Aqui podemos cambiar el intervalo de actualización.
     </script>
 
 </body>

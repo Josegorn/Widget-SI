@@ -7,8 +7,10 @@
 	"settings": {
 		"[html]": {
 			"editor.suggest.insertMode": "replace",
-			"editor.suggest.snippetsPreventQuickSuggestions": true,
-			"editor.suggest.showDetails": true
+			"tailwindCSS.suggestions": true,
+			"editor.inlineSuggest.enabled": true,
+			"editor.tabSize": 4,
+			"javascript.suggest.enabled": true
 		}
 	}
 }

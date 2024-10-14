@@ -171,13 +171,16 @@
 
                 datos.members.forEach(member => {
                     if (member.username !== "DailyBot") {
+
                         const fila = document.createElement("div");
 
+                        //🔵 Avatar
                         const avatar = document.createElement("img");
                         avatar.src = member.avatar_url;
                         avatar.className = "foto";
                         fila.appendChild(avatar);
                         
+                        //🔵 Nombre
                         const nombre = document.createElement("span");
                         if (member.username === "José Manuel Escribano") {
                             nombre.textContent = "🔵 Profesor";
@@ -191,6 +194,7 @@
                         }
                         fila.appendChild(nombre);
 
+                        //🔵 Estado
                         const estado = document.createElement("span");
                         switch (member.status) {
                             case "online":

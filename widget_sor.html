@@ -157,8 +157,9 @@
     </div>
     <script type="text/javascript">
 
-        //🔥🔥🔥 Importante: introducir la ID del servidor, la función Widget debe de estár activada.🔥🔥🔥
-        const url_json = "https://discord.com/api/guilds/1156340462202916916/widget.json";
+        // Importante: introducir la ID del servidor, la función Widget debe de estár activada.
+        const url_json = "https://discord.com/api/guilds/1417926765225054268/widget.json";
+        
         
         const contenedor = document.getElementById("conectados");
 
@@ -174,16 +175,16 @@
 
                         const fila = document.createElement("div");
 
-                        //🔵 Avatar
+                        //Avatar
                         const avatar = document.createElement("img");
                         avatar.src = member.avatar_url;
                         avatar.className = "foto";
                         fila.appendChild(avatar);
                         
-                        //🔵 Nombre
+                        //Nombre
                         const nombre = document.createElement("span");
                         if (member.username === "José Manuel Escribano") {
-                            nombre.textContent = "🔵 Profesor";
+                            nombre.textContent = "Profesor";
                             fila.className = "miembro profesor";
                             contenedor.prepend(fila);
                         }
@@ -194,7 +195,7 @@
                         }
                         fila.appendChild(nombre);
 
-                        //🔵 Estado
+                        //ߔ堅stado
                         const estado = document.createElement("span");
                         switch (member.status) {
                             case "online":
